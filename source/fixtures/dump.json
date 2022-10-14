@@ -1,0 +1,349 @@
+[
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "name": "New",
+    "created_at": "2022-10-14T08:02:10.422Z",
+    "updated_at": "2022-10-14T08:02:10.422Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "name": "Done",
+    "created_at": "2022-10-14T08:02:16.751Z",
+    "updated_at": "2022-10-14T08:02:16.751Z"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "name": "In Progress",
+    "created_at": "2022-10-14T08:02:25.563Z",
+    "updated_at": "2022-10-14T08:02:25.563Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 1,
+  "fields": {
+    "name": "Enhancement",
+    "created_at": "2022-10-14T08:02:32.343Z",
+    "updated_at": "2022-10-14T08:02:32.343Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "Bug",
+    "created_at": "2022-10-14T08:02:36.688Z",
+    "updated_at": "2022-10-14T08:02:36.688Z"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "Task",
+    "created_at": "2022-10-14T08:02:41.790Z",
+    "updated_at": "2022-10-14T08:02:41.790Z"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 5,
+  "fields": {
+    "summary": "Исправить баг",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 3,
+    "created_at": "2022-10-14T08:51:28.962Z",
+    "updated_at": "2022-10-14T12:44:45.812Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 12,
+  "fields": {
+    "summary": "Task 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 2,
+    "created_at": "2022-10-14T09:47:47.437Z",
+    "updated_at": "2022-10-14T09:47:47.437Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 13,
+  "fields": {
+    "summary": "Bug 5",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 2,
+    "created_at": "2022-10-14T09:48:06.222Z",
+    "updated_at": "2022-10-14T09:48:06.222Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 14,
+  "fields": {
+    "summary": "Задача проекта 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 1,
+    "created_at": "2022-10-14T12:10:30.332Z",
+    "updated_at": "2022-10-14T12:10:30.332Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 15,
+  "fields": {
+    "summary": "Задача проекта 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 1,
+    "created_at": "2022-10-14T12:12:57.409Z",
+    "updated_at": "2022-10-14T13:02:09.263Z",
+    "is_deleted": true,
+    "deleted_at": "2022-10-14T13:02:09.263Z",
+    "project": 1,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 16,
+  "fields": {
+    "summary": "Задача 3 проекта 2",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 3,
+    "created_at": "2022-10-14T12:17:04.753Z",
+    "updated_at": "2022-10-14T13:02:25.988Z",
+    "is_deleted": true,
+    "deleted_at": "2022-10-14T13:02:25.988Z",
+    "project": 3,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 17,
+  "fields": {
+    "summary": "Enhancement 2 Проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
+    "status": 1,
+    "created_at": "2022-10-14T12:50:02.630Z",
+    "updated_at": "2022-10-14T13:03:04.834Z",
+    "is_deleted": true,
+    "deleted_at": "2022-10-14T13:03:04.834Z",
+    "project": 3,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 18,
+  "fields": {
+    "summary": "Исправление Проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "status": 3,
+    "created_at": "2022-10-14T12:59:15.811Z",
+    "updated_at": "2022-10-14T12:59:15.811Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 3,
+    "type": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 19,
+  "fields": {
+    "summary": "Добавить Проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "status": 3,
+    "created_at": "2022-10-14T13:00:15.831Z",
+    "updated_at": "2022-10-14T13:00:15.831Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 3,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 20,
+  "fields": {
+    "summary": "Доработка проекта 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in",
+    "status": 1,
+    "created_at": "2022-10-14T13:01:32.807Z",
+    "updated_at": "2022-10-14T13:01:32.807Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 3,
+    "type": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 21,
+  "fields": {
+    "summary": "Баг проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 1,
+    "created_at": "2022-10-14T13:12:34.996Z",
+    "updated_at": "2022-10-14T13:12:34.996Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 3,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 22,
+  "fields": {
+    "summary": "Task проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 2,
+    "created_at": "2022-10-14T13:13:18.879Z",
+    "updated_at": "2022-10-14T13:13:18.879Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 3,
+    "type": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 23,
+  "fields": {
+    "summary": "Баг проект 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 3,
+    "created_at": "2022-10-14T13:13:43.077Z",
+    "updated_at": "2022-10-14T13:13:43.077Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 24,
+  "fields": {
+    "summary": "Задача проекта 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "status": 2,
+    "created_at": "2022-10-14T13:14:03.648Z",
+    "updated_at": "2022-10-14T13:14:03.648Z",
+    "is_deleted": false,
+    "deleted_at": null,
+    "project": 1,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 1,
+  "fields": {
+    "name": "Проект 1",
+    "description": "",
+    "start_date": "2022-10-14",
+    "end_date": "2022-10-30",
+    "created_at": "2022-10-14T10:11:02.260Z",
+    "updated_at": "2022-10-14T10:11:02.260Z"
+  }
+},
+{
+  "model": "webapp.project",
+  "pk": 3,
+  "fields": {
+    "name": "Проект 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "start_date": "2022-10-26",
+    "end_date": null,
+    "created_at": "2022-10-14T12:03:16.572Z",
+    "updated_at": "2022-10-14T12:03:16.572Z"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$aAS06ulXzIx254vK42hrUA$GJDvOFo71nIJfqV1XBJJ7WMtwtsLoVlao/w8X3XGLLE=",
+    "last_login": "2022-10-14T10:10:41.606Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "root@root.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-14T08:00:26.935Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
