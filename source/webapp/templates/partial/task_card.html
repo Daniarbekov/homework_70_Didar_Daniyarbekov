@@ -7,7 +7,7 @@
         {% if not forloop.last %}, 
         {% endif %}
         {% endfor %}</p>
-      <a href="#"  class='btn btn-secondary'>Подробнее...</a>
+      <a href="{% url 'task_detail' task.pk %}"  class='btn btn-secondary'>Подробнее...</a>
     </div>
     <div class='card-link'>
         <a href="#"  class='btn btn-secondary'>Редактировать</a>
