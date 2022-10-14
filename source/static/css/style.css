@@ -4,8 +4,13 @@ body{
 .task-content, .project-content{
     margin-top: 30px;
 }
+.delete-form{
+    margin-top: 50px;
+}
 .pagination{
     text-align: center;
+    margin-left: 30%;
+    margin-top: 20px;
 }
 .pagination a, .pagination .page-disabled{
     display: inline-block;
