@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 class Task(models.Model):
@@ -33,6 +34,20 @@ class Task(models.Model):
         related_name='tasks',
         blank=True
         )
+    is_deleted = models.BooleanField(
+        verbose_name='Удалено', 
+        default=False, null=False
+        )
+    deleted_at = models.DateTimeField(
+        verbose_name='Дата удаления',
+        null=True,
+        default=None
+        )
 
     def get_absolute_url(self):
         return reverse('task_detail', kwargs={'pk': self.pk})
+
+    def delete(self, using=None, keep_parents=False):
+        self.deleted_at = timezone.now()
+        self.is_deleted = True
+        self.save()
