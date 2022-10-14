@@ -4,6 +4,7 @@ from webapp.forms import TaskForm
 from webapp.models import Task, Project
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
+from django.http import Http404
 
 
 class TaskCreateView(CreateView):
@@ -19,7 +20,13 @@ class TaskCreateView(CreateView):
 class TaskDetailView(DetailView):
     model = Task
     template_name = 'task_detail.html'
-    
+
+    def get_object(self, **kwargs):
+        object = Task.objects.get(pk=self.kwargs.get('pk'))
+        if object.is_deleted == True:
+            raise Http404
+        return object
+
 
 class TaskUpdateView(UpdateView): 
     model = Task
