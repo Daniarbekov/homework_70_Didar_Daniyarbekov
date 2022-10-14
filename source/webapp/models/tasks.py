@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from webapp.managers import TaskManager
 
 
 class Task(models.Model):
@@ -50,6 +51,8 @@ class Task(models.Model):
         default='1',
         on_delete=models.CASCADE
         )
+    
+    objects = TaskManager()
     
     def get_absolute_url(self):
         return reverse('task_detail', kwargs={'pk': self.pk})
