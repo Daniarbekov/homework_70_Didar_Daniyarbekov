@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title%}Projects{% endblock %}
+{% block menu%}
+<li class="nav-item">
+    <a class="nav-link" href="#">Добавить проект</a>
+{% endblock %}
+{% block content %}
+<h1>Список Проектов</h1>
+<div class="card-box" >
+            <div class="row">
+            {% for project in projects %}
+             <div class="card text-bg-secondary m-3 col-m-4" style="max-width: 18rem;">
+                <div class="card-header">{{project.name}}</div>
+                <div class="card-body">
+                  <p class="card-text">Начало: {{project.start_date}} </p>
+                  <a href="#"  class='btn btn-secondary'>Подробнее...</a>
+                </div>
+              </div>
+            {% empty %}
+            <p>Проекты не найдены</p>
+          {% endfor %}
+        </div>
+{% endblock %}
