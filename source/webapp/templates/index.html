@@ -2,11 +2,17 @@
 {% block title%}Home{% endblock %}
 {% block content %}
 <h1>Список Задач</h1>
+{% include 'partial/search.html' %}
 <div class="card-box" >
             <div class="row">
             {% for task in tasks %}
             {%  include 'partial/task_card.html' %}
+            {% empty %}
+            <p>Задачи не найдены</p>
           {% endfor %}
         </div>
     </div>
+  {% if is_paginated %}
+    {% include 'partial/pagination.html' %}
+{% endif %}
 {% endblock %}

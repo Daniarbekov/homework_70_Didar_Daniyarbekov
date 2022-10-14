@@ -9,3 +9,7 @@ class TaskForm(forms.ModelForm):
         widgets = {
             'type': forms.CheckboxSelectMultiple
         }
+
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=100, required=False, label='Найти')
