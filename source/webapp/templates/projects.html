@@ -13,7 +13,7 @@
                 <div class="card-header">{{project.name}}</div>
                 <div class="card-body">
                   <p class="card-text">Начало: {{project.start_date}} </p>
-                  <a href="#"  class='btn btn-secondary'>Подробнее...</a>
+                  <a href="{% url 'project_detail' project.pk %}"  class='btn btn-secondary'>Подробнее...</a>
                 </div>
               </div>
             {% empty %}

@@ -4,9 +4,9 @@ from webapp.models import Task, Type, Status, Project
 
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('id', 'summary', 'description', 'status')
+    list_display = ('id', 'summary', 'description', 'status','is_deleted')
     list_filter = ('status', )
-    fields = ('id', 'summary', 'description', 'type', 'status')
+    fields = ('id', 'summary', 'description', 'type', 'status','is_deleted')
     readonly_fields = ('id',)
 
 

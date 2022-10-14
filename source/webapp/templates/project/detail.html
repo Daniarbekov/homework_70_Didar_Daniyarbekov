@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block title%}Detail{% endblock%}
+{% block menu %}
+<li class="nav-item">
+    <a class="nav-link" href="#">Добавить задачу</a>
+{% endblock%}
+    {% block content%}
+    <div class='project-content'>
+    <div class="card detail-card text-bg-secondary">
+        <h5 class="card-header">{{project.name}}</h5>
+        <div class="card-body">
+          <h5>Дата начало: {{project.start_date}}</h5>
+          {% if project.end_date%}
+            <h5>Дата окончания: {{project.end_date}}</h5>
+            {% endif %}
+          <p class="card-text">{{project.description}}</p>
+          <a href="#" class="btn btn-secondary">Редактировать</a>
+          <a href="#" class="btn btn-secondary">Удалить</a>
+        </div>
+      </div>
+<h5> Список задач проекта </h5>
+    <div class="task_list">
+        <div class="row">
+            {% for task in project.tasks.all %}
+            {%  include 'partial/task_card.html' %}
+            {% empty %}
+            <p>Задачи не найдены</p>
+          {% endfor %}
+        </div>
+    </div>
+    </div>
+    {% endblock %}
