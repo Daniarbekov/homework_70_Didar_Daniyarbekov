@@ -43,7 +43,14 @@ class Task(models.Model):
         null=True,
         default=None
         )
-
+    project = models.ForeignKey(
+        to='webapp.Project',
+        verbose_name='Проект',
+        related_name='tasks',
+        default='1',
+        on_delete=models.CASCADE
+        )
+    
     def get_absolute_url(self):
         return reverse('task_detail', kwargs={'pk': self.pk})
 
