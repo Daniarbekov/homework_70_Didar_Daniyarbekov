@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title%}Home{% endblock %}
+{% block content %}
+<h1>Список Задач</h1>
+<div class="card-box" >
+            <div class="row">
+            {% for task in tasks %}
+            {%  include 'partial/task_card.html' %}
+          {% endfor %}
+        </div>
+    </div>
+{% endblock %}
