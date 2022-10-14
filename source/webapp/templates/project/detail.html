@@ -3,7 +3,7 @@
 {% block title%}Detail{% endblock%}
 {% block menu %}
 <li class="nav-item">
-    <a class="nav-link" href="#">Добавить задачу</a>
+    <a class="nav-link" href="{% url 'task_create' project.pk %}">Добавить задачу</a>
 {% endblock%}
     {% block content%}
     <div class='project-content'>
