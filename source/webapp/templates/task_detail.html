@@ -13,7 +13,7 @@
             {% endfor %}</h5>
           <h5>Статус задачи: {{task.status}}</h5>
           <p class="card-text">{{task.description}}</p>
-          <a href="#" class="btn btn-secondary">Редактировать</a>
+          <a href="{% url 'task_update' task.pk %}" class="btn btn-secondary">Редактировать</a>
           <a href="#" class="btn btn-secondary">Удалить</a>
         </div>
       </div>
