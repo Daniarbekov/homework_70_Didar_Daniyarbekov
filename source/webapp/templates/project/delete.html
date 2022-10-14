@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Delete{% endblock %}
+{% block content %}
+<div class="delete-form">
+    <form method="POST" action="{% url 'project_delete' project.pk %}" class="text-center">
+        <h3>Вы уверены что хотите удалить "{{ project.name }}"?</h3>
+        {% csrf_token %}
+        <input type="submit" value="Удалить" class="btn btn-secondary link">
+        <a href="{% url 'index' %} " class="btn btn-secondary link">Отмена</a>
+    </form>
+</div>
+{% endblock %}
