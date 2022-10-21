@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block title%}Projects{% endblock %}
 {% block menu%}
+{% if user.is_authenticated%}
 <li class="nav-item">
     <a class="nav-link" href="{% url 'project_create' %}">Добавить проект</a>
+  {% endif %}
 {% endblock %}
 {% block content %}
 <h1>Список Проектов</h1>
