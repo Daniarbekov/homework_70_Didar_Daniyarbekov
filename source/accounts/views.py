@@ -16,16 +16,17 @@ class LoginView(TemplateView):
 
     def post(self, request, *args, **kwargs):
         form = self.form(request.POST)
-        if not form.is_valid():
-            return redirect('login')
-        username = form.cleaned_data.get('username')
-        password = form.cleaned_data.get('password')
-        user = authenticate(request, username=username, password=password)
-        if not user:
-            context={'has_error': True, 'form':form}
-            return self.render_to_response(context)
-        login(request, user)
-        return redirect('index')
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            if user:
+                login(request, user)
+                return redirect('index')
+        else:
+            form = LoginForm(request.POST)
+        return self.render_to_response(context={'form':form})
+
 
 def logout_view(request):
     logout(request)
