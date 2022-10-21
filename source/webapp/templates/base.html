@@ -26,6 +26,13 @@
             <li class="nav-item">
                   <a class="nav-link" href="{% url 'projects' %}">Список проектов</a>
               {% block menu %}{% endblock %}
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Выйти</a>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Войти</a>
+            {% endif %}
         </ul>
       </div>
     </div>
