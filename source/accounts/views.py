@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from accounts.forms import LoginForm
@@ -26,3 +26,7 @@ class LoginView(TemplateView):
             return self.render_to_response(context)
         login(request, user)
         return redirect('index')
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')
