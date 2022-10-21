@@ -5,9 +5,10 @@ from webapp.models import Task, Project
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-class TaskCreateView(CreateView):
+class TaskCreateView(LoginRequiredMixin,CreateView):
     template_name = 'task_create.html'
     form_class = TaskForm
     
@@ -28,13 +29,13 @@ class TaskDetailView(DetailView):
         return object
 
 
-class TaskUpdateView(UpdateView): 
+class TaskUpdateView(LoginRequiredMixin,UpdateView): 
     model = Task
     template_name = 'task_update.html'
     form_class = TaskForm
 
 
-class TaskDeleteView(DeleteView): 
+class TaskDeleteView(LoginRequiredMixin,DeleteView): 
     model = Task
     template_name = 'task_delete.html'
     success_url = reverse_lazy('index')

@@ -9,8 +9,10 @@
         {% endfor %}</p>
       <a href="{% url 'task_detail' task.pk %}"  class='btn btn-secondary'>Подробнее...</a>
     </div>
+    {%if user.is_authenticated%}
     <div class='card-link'>
         <a href="{% url 'task_update' task.pk %}"  class='btn btn-secondary'>Редактировать</a>
         <a href="{% url 'task_delete' task.pk %}"  class='btn btn-secondary'>Удалить</a>
     </div>
+    {% endif %}
   </div>
