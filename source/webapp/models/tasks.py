@@ -61,3 +61,6 @@ class Task(models.Model):
         self.deleted_at = timezone.now()
         self.is_deleted = True
         self.save()
+    
+    def __str__(self) -> str:
+        return f"{self.id} - {self.summary} - {self.status}"
