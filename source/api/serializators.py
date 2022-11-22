@@ -3,7 +3,7 @@ from webapp.models import Task, Project, Type, Status
 
 
 class ProjectSerializator(serializers.ModelSerializer):
-    tasks = serializers.StringRelatedField(many=True)
+    tasks = serializers.StringRelatedField(many=True, read_only=True)
     
     class Meta:
         model = Project
