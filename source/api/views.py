@@ -28,3 +28,13 @@ class ProjectUpdateView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class TaskUpdateView(APIView):
+    def put(self, request, pk, format=None):
+        task = get_object_or_404(Task,pk=pk)
+        serializer = TaskSerializator(task, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
