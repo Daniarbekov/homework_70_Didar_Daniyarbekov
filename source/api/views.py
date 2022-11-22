@@ -38,3 +38,11 @@ class TaskUpdateView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProjectDeleteView(APIView):
+    def delete(self, request, pk, format=None):
+        project = get_object_or_404(Project,pk=pk)
+        deleted_project = project.pk
+        project.delete()
+        return Response( deleted_project,status=status.HTTP_204_NO_CONTENT)
