@@ -46,3 +46,10 @@ class ProjectDeleteView(APIView):
         deleted_project = project.pk
         project.delete()
         return Response( deleted_project,status=status.HTTP_204_NO_CONTENT)
+
+
+class TaskDeleteView(APIView):
+    def delete(self, request, pk, format=None):
+        task = get_object_or_404(Task,pk=pk)
+        task.delete()
+        return Response(task.pk,status=status.HTTP_204_NO_CONTENT)
